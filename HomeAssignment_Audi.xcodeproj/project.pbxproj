@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		98BA4CC52D5237A2003242B8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 98BA4CC42D5237A2003242B8 /* Alamofire */; };
 		98BA4CC82D5237BB003242B8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 98BA4CC72D5237BB003242B8 /* Kingfisher */; };
+		98BA4CDC2D52635A003242B8 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 98BA4CDB2D52635A003242B8 /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		98BA4C8F2D51B2ED003242B8 /* HomeAssignment_Audi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeAssignment_Audi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BA4CA02D51B2EE003242B8 /* HomeAssignment_AudiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeAssignment_AudiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98BA4CAA2D51B2EE003242B8 /* HomeAssignment_AudiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeAssignment_AudiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98BA4CDB2D52635A003242B8 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -82,6 +84,7 @@
 		98BA4C862D51B2ED003242B8 = {
 			isa = PBXGroup;
 			children = (
+				98BA4CDB2D52635A003242B8 /* readme.md */,
 				98BA4C912D51B2ED003242B8 /* HomeAssignment_Audi */,
 				98BA4CA32D51B2EE003242B8 /* HomeAssignment_AudiTests */,
 				98BA4CAD2D51B2EE003242B8 /* HomeAssignment_AudiUITests */,
@@ -225,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98BA4CDC2D52635A003242B8 /* readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
