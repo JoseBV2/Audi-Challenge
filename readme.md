@@ -68,5 +68,5 @@ Cmd + U in Xcode
 Contributions are welcome! If you find a bug or want to improve the app, open a `pull request` or create an `issue`.
 
 ---
-**Developed by:** José Bustamante 🚀
+**Developed by:** Jose Bustamante 🚀
 

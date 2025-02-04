@@ -29,9 +29,11 @@ class CatListViewModel: ObservableObject {
     @Published var page: Int = 0
     private let limit = 10
     private var canLoadMore = true
+    var networkService: NetworkServiceProtocol
     
     
-    init() {
+    init(networkService: NetworkServiceProtocol = NetworkService.shared) {
+        self.networkService = networkService
         loadFavorites()
         loadCats()
     }

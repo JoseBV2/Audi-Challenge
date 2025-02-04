@@ -61,6 +61,7 @@ struct CatRowView: View {
                     .scaleEffect(animateHeart ? 1.3 : 1.0)
                     .animation(.spring(response: 0.3, dampingFraction: 0.5), value: animateHeart)
                     .padding()
+                    .accessibilityIdentifier("favoriteButton")
             }
             .onChange(of: animateHeart) { oldValue, newValue in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
