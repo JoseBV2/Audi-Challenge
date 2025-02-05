@@ -25,7 +25,7 @@ struct CatRowView: View {
     
     var body: some View {
         HStack {
-            KFImage(URL(string: cat.imageUrl))
+            KFImage(URL(string: cat.imageURL))
                 .resizable()
                 .scaledToFill()
                 .frame(width: 90, height: 90)

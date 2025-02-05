@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct HomeAssignment_AudiApp: App {
+    
     var body: some Scene {
         WindowGroup {
             MainTabView()

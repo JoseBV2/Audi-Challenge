@@ -12,29 +12,64 @@ struct CatDetailView: View {
     let cat: Cat
     
     var body: some View {
-        VStack(spacing: 20) {
-            KFImage(URL(string: cat.imageUrl))
-                .resizable()
-                .scaledToFit()
-                .frame(height: 300)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                .shadow(radius: 5)
-                .padding()
-                .transition(.scale)
-            
-            Text(cat.name)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .foregroundColor(.primary)
-            
-            Text(cat.description)
-                .font(.body)
-                .foregroundColor(.secondary)
-                .multilineTextAlignment(.center)
-                .padding()
-            
-            Spacer()
+        GeometryReader { geometry in
+            let isLandscape = geometry.size.width > geometry.size.height
+
+            VStack {
+                if isLandscape {
+                    HStack(spacing: 16) {
+                        CatImageView(url: cat.imageURL)
+                            .frame(width: geometry.size.width * 0.4, height: geometry.size.height * 0.6)
+                            .cornerRadius(12)
+                        
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(cat.name)
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+
+                            Text(cat.temperament)
+                                .font(.headline)
+                                .foregroundColor(.gray)
+
+                            Text(cat.origin)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+
+                            Text(cat.description)
+                                .font(.body)
+                                .padding(.top, 10)
+                        }
+                        .frame(width: geometry.size.width * 0.5)
+                    }
+                    .padding()
+                } else {
+                    VStack(spacing: 16) {
+                        CatImageView(url: cat.imageURL)
+                            .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.4)
+                            .cornerRadius(12)
+
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text(cat.name)
+                                .font(.largeTitle)
+                                .fontWeight(.bold)
+
+                            Text(cat.temperament)
+                                .font(.headline)
+                                .foregroundColor(.gray)
+
+                            Text(cat.origin)
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+
+                            Text(cat.description)
+                                .font(.body)
+                                .padding(.top, 10)
+                        }
+                        .padding()
+                    }
+                }
+            }
+            .frame(width: geometry.size.width, height: geometry.size.height)
         }
-        .padding()
     }
 }

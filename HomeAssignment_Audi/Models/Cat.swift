@@ -20,8 +20,8 @@ struct Cat: Identifiable, Codable {
         case referenceImageID = "reference_image_id"
     }
     
-    var imageUrl: String {
-        guard let imageID = referenceImageID else { return "https://via.placeholder.com/150" }
+    var imageURL: String {
+        guard let imageID = referenceImageID else { return "placeholderCat" }
         return "https://cdn2.thecatapi.com/images/\(imageID).jpg"
     }
 }
